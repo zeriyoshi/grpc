@@ -777,7 +777,7 @@ typedef struct grpc_tls_identity_pairs grpc_tls_identity_pairs;
  * Creates a grpc_tls_identity_pairs that stores a list of identity credential
  * data, including identity private key and identity certificate chain.
  */
-GRPCAPI grpc_tls_identity_pairs* grpc_tls_identity_pairs_create();
+GRPCAPI grpc_tls_identity_pairs* grpc_tls_identity_pairs_create(void);
 
 /**
  * EXPERIMENTAL API - Subject to change
@@ -1087,7 +1087,7 @@ grpc_tls_certificate_verifier* grpc_tls_certificate_verifier_external_create(
  * Factory function for an internal verifier that will do the default hostname
  * check.
  */
-grpc_tls_certificate_verifier* grpc_tls_certificate_verifier_host_name_create();
+grpc_tls_certificate_verifier* grpc_tls_certificate_verifier_host_name_create(void);
 
 /**
  * EXPERIMENTAL API - Subject to change
@@ -1177,14 +1177,14 @@ grpc_server_credentials* grpc_tls_server_credentials_create(
  *
  * This method creates an insecure channel credentials object.
  */
-grpc_channel_credentials* grpc_insecure_credentials_create();
+grpc_channel_credentials* grpc_insecure_credentials_create(void);
 
 /**
  * EXPERIMENTAL API - Subject to change
  *
  * This method creates an insecure server credentials object.
  */
-grpc_server_credentials* grpc_insecure_server_credentials_create();
+grpc_server_credentials* grpc_insecure_server_credentials_create(void);
 
 /**
  * EXPERIMENTAL API - Subject to change
